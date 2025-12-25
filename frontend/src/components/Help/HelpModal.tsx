@@ -2,7 +2,7 @@
  * Help documentation modal component.
  */
 
-import { Modal, Tabs, Typography, Space, List, Tag } from 'antd';
+import { Modal, Tabs, Typography, Space, List } from 'antd';
 import {
   RocketOutlined,
   RobotOutlined,
