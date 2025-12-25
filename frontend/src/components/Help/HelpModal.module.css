@@ -1,0 +1,192 @@
+.modal :global(.ant-modal-content) {
+  background: #1a1a2e;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.modal :global(.ant-modal-header) {
+  background: #1a1a2e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal :global(.ant-modal-title) {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal :global(.ant-modal-close-x) {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.modal :global(.ant-modal-close-x):hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.tabs :global(.ant-tabs-nav) {
+  margin-bottom: 24px;
+}
+
+.tabs :global(.ant-tabs-tab) {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+}
+
+.tabs :global(.ant-tabs-tab:hover) {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.tabs :global(.ant-tabs-tab-active) {
+  color: #6366f1 !important;
+}
+
+.tabs :global(.ant-tabs-ink-bar) {
+  background: #6366f1;
+}
+
+.content {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Custom scrollbar */
+.content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Typography styles */
+.content h4 {
+  color: rgba(255, 255, 255, 0.95) !important;
+  margin-bottom: 12px !important;
+}
+
+.content h5 {
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+.content p {
+  color: rgba(255, 255, 255, 0.75) !important;
+  line-height: 1.8;
+}
+
+/* Lists */
+.exampleList,
+.featureList,
+.tipList {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0;
+}
+
+.exampleList li,
+.featureList li,
+.tipList li {
+  padding: 8px 0;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+.exampleList li::before {
+  content: '💡';
+  margin-right: 8px;
+}
+
+.featureList li::before {
+  content: '✓';
+  color: #52c41a;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.tipList li::before {
+  content: '•';
+  color: #6366f1;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* Agent cards */
+.agentCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+.agentHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.agentIcon {
+  font-size: 28px;
+  margin-top: 4px;
+}
+
+.agentCard ul {
+  margin: 8px 0;
+  padding-left: 24px;
+}
+
+.agentCard ul li {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  margin: 4px 0;
+}
+
+/* Ant Design overrides */
+.content :global(.ant-list-item) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 12px 0;
+}
+
+.content :global(.ant-list-item:last-child) {
+  border-bottom: none;
+}
+
+.content :global(.ant-list-item-meta-title) {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.content :global(.ant-list-item-meta-description) {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.content :global(.ant-typography code) {
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #8b9bff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.content :global(.ant-tag) {
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    max-height: 50vh;
+  }
+}
+

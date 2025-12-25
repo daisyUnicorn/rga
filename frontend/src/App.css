@@ -1,0 +1,118 @@
+/* Global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background: #0a0a0a;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Loading container */
+.loading-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0a0a;
+}
+
+/* Ant Design overrides for dark theme */
+.ant-spin-text {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.ant-dropdown-menu {
+  background: #1a1a2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.ant-dropdown-menu-item {
+  color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+.ant-dropdown-menu-item:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  }
+
+.ant-dropdown-menu-item-disabled {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.ant-message-notice-content {
+  background: #1a1a2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Error message with better contrast */
+.ant-message-error .ant-message-notice-content {
+  background: #2d1a1a !important;
+  border: 1px solid rgba(255, 82, 82, 0.3) !important;
+  color: #ff9999 !important;
+}
+
+/* Success message */
+.ant-message-success .ant-message-notice-content {
+  background: #1a2d1a !important;
+  border: 1px solid rgba(82, 196, 26, 0.3) !important;
+  color: #95de64 !important;
+}
+
+/* Info message */
+.ant-message-info .ant-message-notice-content {
+  background: #1a1a2e !important;
+  border: 1px solid rgba(24, 144, 255, 0.3) !important;
+  color: #69c0ff !important;
+}
+
+/* Warning message */
+.ant-message-warning .ant-message-notice-content {
+  background: #2d2a1a !important;
+  border: 1px solid rgba(250, 173, 20, 0.3) !important;
+  color: #ffc53d !important;
+}
+
+/* Typography */
+.ant-typography {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ant-typography.ant-typography-secondary {
+  color: rgba(255, 255, 255, 0.5);
+  }
+
+/* Empty state */
+.ant-empty-description {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Alert */
+.ant-alert {
+  border-radius: 12px;
+}

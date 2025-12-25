@@ -1,0 +1,295 @@
+.layout {
+  height: 100vh;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.sider {
+  background: #0f0f0f !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Fix sider inner wrapper to be flex container */
+.sider :global(.ant-layout-sider-children) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sider :global(.ant-layout-sider-trigger) {
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logoImage {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.logoText {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.newSession {
+  padding: 16px;
+}
+
+.newSessionButton {
+  height: 44px !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+.sessionList {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 8px;
+  min-height: 0; /* Important for flex child to scroll */
+}
+
+/* Custom scrollbar for session list */
+.sessionList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sessionList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sessionList::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.sessionList::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.emptyList {
+  padding: 24px;
+  text-align: center;
+}
+
+.menu {
+  background: transparent !important;
+  border: none !important;
+}
+
+.menu :global(.ant-menu-item) {
+  border-radius: 10px !important;
+  margin: 4px 0 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.menu :global(.ant-menu-item:hover) {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.menu :global(.ant-menu-item-selected) {
+  background: rgba(99, 102, 241, 0.2) !important;
+  color: white !important;
+}
+
+.sessionItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 8px;
+}
+
+.sessionName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.agentTag {
+  flex-shrink: 0;
+  margin: 0 !important;
+  font-size: 11px !important;
+  padding: 0 6px !important;
+  line-height: 18px !important;
+  border-radius: 4px !important;
+}
+
+.deleteButton {
+  opacity: 0;
+  color: rgba(255, 255, 255, 0.5) !important;
+  transition: opacity 0.2s;
+}
+
+.menu :global(.ant-menu-item:hover) .deleteButton {
+  opacity: 1;
+}
+
+.deleteButton:hover {
+  color: #ef4444 !important;
+}
+
+.header {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0 24px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.status {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.status.active {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.userInfo:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.userName {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+}
+
+.content {
+  background: #0a0a0a;
+  padding: 0;
+  overflow: hidden;
+}
+
+.mainArea {
+  display: flex;
+  height: calc(100vh - 64px - 48px); /* Header height - Acknowledgment height */
+  overflow: hidden;
+}
+
+.chatArea {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.phoneArea {
+  width: 420px;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .phoneArea {
+    width: 360px;
+  }
+}
+
+@media (max-width: 992px) {
+  .phoneArea {
+    display: none;
+  }
+}
+
+/* Acknowledgment footer */
+.acknowledgment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 24px;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  height: 48px;
+}
+
+.acknowledgmentLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.heartIcon {
+  color: #ef4444;
+  font-size: 14px;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.acknowledgmentText {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.acknowledgmentLink {
+  color: #6366f1 !important;
+  font-weight: 600;
+  margin: 0 2px;
+  transition: all 0.2s ease;
+}
+
+.acknowledgmentLink:hover {
+  color: #8b5cf6 !important;
+  text-decoration: underline;
+}
+
+.disclaimerText {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: rgba(250, 173, 20, 0.08);
+  border: 1px solid rgba(250, 173, 20, 0.2);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+}
+

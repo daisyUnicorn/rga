@@ -1,0 +1,421 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+}
+
+.messages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Scrollbar */
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Empty state */
+.empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.emptyIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.emptyIcon {
+  font-size: 72px;
+  color: #818cf8;
+}
+
+.emptyLogo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.emptyHint {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Message rows */
+.messageRow {
+  width: 100%;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* User message */
+.userMessage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.userAvatar {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+  flex-shrink: 0;
+}
+
+.messageText {
+  max-width: 70%;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 16px 16px 4px 16px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+/* Assistant message */
+.assistantMessage {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.assistantAvatar {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  flex-shrink: 0;
+}
+
+.assistantContent {
+  flex: 1;
+  min-width: 0;
+  max-width: calc(100% - 50px);
+}
+
+/* Steps container */
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Step item */
+.stepItem {
+  display: flex;
+  gap: 16px;
+}
+
+/* Step indicator (number + line) */
+.stepIndicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.stepNumber {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.stepNumber.thinking {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+}
+
+.stepNumber.completed {
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+}
+
+.stepLine {
+  flex: 1;
+  width: 2px;
+  min-height: 16px;
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.3) 0%, rgba(99, 102, 241, 0.1) 100%);
+  margin: 4px 0;
+}
+
+/* Step body */
+.stepBody {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Section header */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Duration display */
+.duration {
+  margin-left: auto;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Thinking section */
+.thinkingSection {
+  background: rgba(245, 158, 11, 0.06);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.thinkingIcon {
+  color: #fbbf24;
+  font-size: 14px;
+}
+
+.thinkingSpinner {
+  margin-left: auto;
+}
+
+.thinkingSpinner :global(.ant-spin-dot) {
+  font-size: 12px !important;
+}
+
+.thinkingText {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Action section */
+.actionSection {
+  background: rgba(99, 102, 241, 0.06);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.actionIcon {
+  color: #818cf8;
+  font-size: 14px;
+}
+
+.actionBody {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.actionTag {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  padding: 2px 10px !important;
+  border-radius: 6px !important;
+  margin: 0 !important;
+}
+
+.actionParams {
+  font-size: 12px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.actionMessage {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Loading state */
+.loadingState {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Completion message */
+.completionMessage {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+.completionIcon {
+  color: #10b981;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.completionMessage span {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Stopped state */
+.completionMessage.stopped {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+.stoppedIcon {
+  color: #f59e0b;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Error state */
+.completionMessage.error {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.errorIcon {
+  color: #ef4444;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Input area */
+.inputArea {
+  padding: 10px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Processing bar */
+.processingBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+}
+
+.processingInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.processingText {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 14px;
+}
+
+.stopButton {
+  height: 36px !important;
+  padding: 0 20px !important;
+  border-radius: 10px !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.sender {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.sender:hover,
+.sender:focus-within {
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+.sender :global(.ant-sender-content) {
+  background: transparent !important;
+}
+
+.sender :global(textarea) {
+  color: white !important;
+  font-size: 14px !important;
+}
+
+.sender :global(textarea)::placeholder {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.sender :global(.ant-btn-primary) {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+  border: none !important;
+  border-radius: 10px !important;
+}
+
+.sender :global(.ant-btn-primary:hover) {
+  opacity: 0.9;
+}

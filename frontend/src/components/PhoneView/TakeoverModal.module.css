@@ -1,0 +1,102 @@
+/* 限制 Modal 在 container 内 */
+.modalRoot :global(.ant-modal-wrap) {
+  position: absolute !important;
+}
+
+.modalRoot :global(.ant-modal-mask) {
+  position: absolute !important;
+}
+
+.modal :global(.ant-modal-content) {
+  background: #1a1a2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px !important;
+}
+
+.content {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  box-shadow: 0 10px 30px -5px rgba(245, 158, 11, 0.4);
+}
+
+.title {
+  color: white !important;
+  margin-bottom: 16px !important;
+}
+
+.alert {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  border-radius: 12px !important;
+  margin-bottom: 16px;
+}
+
+.alert :global(.ant-alert-message) {
+  color: #fbbf24 !important;
+  font-weight: 500;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.6) !important;
+  margin-bottom: 24px !important;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stepNumber {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+
+.completeButton {
+  height: 48px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  border: none !important;
+  box-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.4);
+}
+
+.completeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px -5px rgba(16, 185, 129, 0.5) !important;
+}
+
