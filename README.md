@@ -12,6 +12,10 @@
   <a href="./README_EN.md">English</a> | 中文
 </p>
 
+<p align="center">
+  🌐 <a href="https://rga.ai-web.ai"><strong>在线体验 Demo</strong></a>
+</p>
+
 ---
 
 支持流式对话、人工接管和实时画面显示。
