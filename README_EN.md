@@ -12,6 +12,10 @@
   English | <a href="./README.md">中文</a>
 </p>
 
+<p align="center">
+  🌐 <a href="https://rga.ai-web.ai"><strong>Live Demo</strong></a>
+</p>
+
 ---
 
 Supporting streaming conversations, human takeover, and real-time screen display.
