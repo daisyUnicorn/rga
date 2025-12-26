@@ -26,6 +26,8 @@ import {
   ExperimentOutlined,
   QuestionCircleOutlined,
   SafetyOutlined,
+  GithubOutlined,
+  StarOutlined,
 } from '@ant-design/icons';
 import { useAuthStore } from '../../store/authStore';
 import { useSessionStore } from '../../store/sessionStore';
@@ -332,6 +334,17 @@ export function MainLayout() {
                 </Link>
                 团队对于本项目的大力支持
               </Text>
+            </div>
+            <div className={styles.acknowledgmentCenter}>
+              <Link
+                href="https://github.com/5101good/rga"
+                target="_blank"
+                className={styles.githubLink}
+              >
+                <GithubOutlined className={styles.githubIcon} />
+                <Text className={styles.githubText}>GitHub</Text>
+                <StarOutlined className={styles.starIcon} />
+              </Link>
             </div>
             <div className={styles.disclaimerText}>
               <SafetyOutlined style={{ marginRight: '6px' }} />

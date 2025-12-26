@@ -12,6 +12,7 @@ import {
   SettingOutlined,
   SafetyOutlined,
   BulbOutlined,
+  GithubOutlined,
 } from '@ant-design/icons';
 import styles from './HelpModal.module.css';
 
@@ -38,6 +39,12 @@ export function HelpModal({ open, onClose }: HelpModalProps) {
               <Title level={4}>欢迎使用 Remote GUI Automation</Title>
               <Paragraph>
                 这是一个 AI 驱动的远程 GUI 自动化平台，让您能够通过自然语言控制云手机，实现智能任务执行，体验最新的各种GUI Agent的实际效果。
+              </Paragraph>
+              <Paragraph>
+                <GithubOutlined /> 项目开源地址：
+                <Link href="https://github.com/5101good/rga" target="_blank" style={{ marginLeft: '8px', fontWeight: 600 }}>
+                  https://github.com/5101good/rga
+                </Link>
               </Paragraph>
             </div>
 

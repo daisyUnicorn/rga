@@ -3,7 +3,7 @@
  */
 
 import { Button, Card, Typography, Space } from 'antd';
-import { GoogleOutlined, GithubOutlined } from '@ant-design/icons';
+import { GoogleOutlined, GithubOutlined, StarOutlined } from '@ant-design/icons';
 import { useAuthStore } from '../../store/authStore';
 import styles from './LoginPage.module.css';
 
@@ -93,6 +93,15 @@ export function LoginPage() {
       </Card>
       
       <div className={styles.acknowledgment}>
+        <Link 
+          href="https://github.com/5101good/rga" 
+          target="_blank"
+          className={styles.githubProjectLink}
+        >
+          <GithubOutlined className={styles.githubProjectIcon} />
+          <span className={styles.githubProjectText}>开源项目</span>
+          <StarOutlined className={styles.githubStarIcon} />
+        </Link>
         <Text className={styles.acknowledgmentText}>
           感谢无影
           <Link 
